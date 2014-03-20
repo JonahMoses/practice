@@ -1,0 +1,14 @@
+<%= form_tag games_path do %>
+
+  <div id="battleships">
+    <%= label_tag :'battleship_points[]', 'Battleships:' %>
+    <%= text_area_tag :'battleship_points[]' %>
+  </div>
+
+  <div id="rectangle">
+    <%= label_tag :'rectangle_points[]', 'Rectangles:' %>
+    <%= text_area_tag :'rectangle_points[]' %>
+  </div>
+
+  <%= submit_tag 'Submit' %>
+<% end %>

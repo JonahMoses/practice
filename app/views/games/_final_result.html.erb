@@ -1,0 +1,13 @@
+<% ships = [] %>
+Result: <%= rectangle.top_left_point.lat %>, <%= rectangle.top_left_point.long %>, <%= rectangle.bottom_right_point.lat %>, <%= rectangle.bottom_right_point.long %>:
+<% @battleship_points.each do |battleship| %>
+  <% if rectangle.includes?(battleship) %>
+    <% ships << battleship %>
+  <% end %>
+<% end %>
+<% if ships.empty? %>
+  MISS<br />
+<% else %>
+  HIT: [<% ships.each do |ship| %>(<%= ship.lat %>, <%= ship.long %>) <% end %>] <br />
+<% end %>
+

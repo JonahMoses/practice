@@ -1,0 +1,5 @@
+<% if @rectangle && @battleship_points %>
+  <% @rectangle.each do |r| %>
+    <%= render partial: "final_result", locals: {rectangle: r, battleship_points: @battleship_points} %>
+  <% end %>
+<% end %>
